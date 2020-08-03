@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hadith</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.min.css">
+	        <!-- Google fonts-->
+			<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+			<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+			<!-- Core theme CSS (includes Bootstrap)-->
+			<link href="./css/styles.css" rel="stylesheet" />
+	<style type="text/css">
+		body{
+			/* background-color: rgba(178, 243, 238,0.1); */
+			background: linear-gradient(rgb(176,224,230),rgb(173,216,230),rgb(135,206,250),rgb(135,206,235));
+			font-family: "Times Roman";
+
+		}
+		.greeting{
+			text-align: center;
+			border-right: 3px solid;
+			border-bottom: 3px solid;
+			width: 30%;
+			font-size: 380%;
+			background-color: rgba(30,144,255,0.1);
+			color: rgba(0,0,128,0.4);
+		}
+		.important-cheez{
+			height: 100%;
+			text-align: center;
+
+
+
+		}
+		img{
+			border: 2px solid rgba(58, 145, 26,0.6);
+		}
+		.specialP{
+			margin-top: 20px;
+		}
+		.abdulR1{
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			padding-bottom: 25px;
+			border-bottom: 3px solid 	rgb(230,230,250);
+		}
+		.mHeading{
+			cursor: pointer;
+			font-size: 2rem;
+			/* background-color: 	rgb(0,100,0,0.1); */
+			color: rgb(112,128,144);
+			text-shadow: 2px 2px 5px white,4px 4px 7px white,-2px -2px 5px white;
+
+
+		}
+		/* width */
+		::-webkit-scrollbar {
+		  width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		  background: #f1f1f1;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		  background: #167AC6;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: #024EAF;
+		}
+		.btn{
+
+			background-color: rgba(112, 169, 169,0.3)
+		}
+		.card{
+			border: 1px solid rgba(169, 224, 148,0.35);
+			border-radius: 10px;
+			padding: 20px;
+			background-color: rgba(135,206,235,0.4);
+		}
+		#buk,#tir,#maj,#mus{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " >
+		<div class="container">
+			
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./Quran/Quran.html">Quran</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./videos/Video.html">Tilawat</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./hadith.html">Hadith</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./hidayah/hidyah.html">Hidayah</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./nasheed/nasheed.html">Naat/Nasheed</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./From/SignIn.php">Login</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" target="blank" href="./Quran/AboutUs.html">About us</a></li>
+				</ul>
+			</div>
+		</div>
+	 </nav>
+	<div class="greeting">
+		Hadith Books
+	</div>
+	<div class="important-cheez">
+		<div class="abdulR1">
+		<a href="https://sunnah.com/bukhari" target="_blank"><img src="download.jpg" width="130px"></a><br>
+		<label for="Main-Heading"><h1 class="mHeading">Shaih Bukhari</h1></label><br>
+		<button class="bukhari btn btn-outline-info" id="Main-Heading">Show Books</button>
+
+	</div>
+		<div id ="buk" class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Bukhari Vol 1</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/b1.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Bukhari Vol 2</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/b2.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Bukhari Vol 3</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/b3.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Bukhari Vol 4</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/b4.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+					<div class="col-lg-3 offset-lg-3 col-md-4 col-sm-6">
+						<div class="card" style="width: 18rem;  ">
+				  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
+				  			<hr>
+		  					<div class="card-body">
+				    			<h5 class="card-title">Sahih Bukhari Vol 5</h5>
+				    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    			<a href="books/b5.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  						</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 offset-lg-0 col-md-4 col-sm-6">
+						<div class="card" style="width: 18rem;  ">
+				  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
+				  			<hr>
+		  					<div class="card-body">
+				    			<h5 class="card-title">Sahih Bukhari Vol 6</h5>
+				    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    			<a href="books/b6.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  						</div>
+						</div>
+					</div>
+
+			</div>
+		</div>
+		<div class="abdulR1 specialP">
+			<a href="https://sunnah.com/muslim" target="_blank"><img src="sahihmuslim.jpg" width="150px"></a><br>
+		<label for="M-book"><h1 class="mHeading">Shaih Muslim</h1></label> <br>
+		<button class="muslim btn btn-outline-info" id="M-book">Show Books</button>
+	</div>
+		<br>
+		<div id="mus"class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Muslim Vol 1</h5>
+		    			<p class="card-text">Some quick example text to build o.</p>
+		    			<a href="books/muslim1.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-4 	col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Muslim Vol 2</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/muslim2.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Muslim Vol 3</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/muslim3.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  offset-lg-2 col-md-4 col-sm-2">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sahih Muslim Vol 4</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/muslim5.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="card" style="width: 18rem;  ">
+				  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
+				  			<hr>
+		  					<div class="card-body">
+				    			<h5 class="card-title">Sahih Muslim Vol 5</h5>
+				    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    			<a href="books/muslim4.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  						</div>
+						</div>
+					</div>
+
+
+
+			</div>
+
+
+
+		</div>
+		<div class="abdulR1 specialP">
+		<a href="https://sunnah.com/tirmidhi" target="_blank"><img src="tirmizi.jpg" width="150px"></a><br>
+		<label for="T-book"><h1 class="mHeading">Jamia Al Tirmizi</h1></label><br>
+		<button class="tirmizi btn btn-outline-info" id="T-book">Show Books</button>
+	</div>
+		<br>
+		<div id="tir"class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 ">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="tirmizi.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Jamia Al Tirmizi Vol 1</h5>
+		    			<p class="card-text">Some quick example text to build o.</p>
+		    			<a href="books/Tirmizi1.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-4 	col-md-4 ">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="tirmizi.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Jamia Al Tirmizi Vol 2</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/Tirmizi2.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+
+		</div>
+
+		<div class="abdulR1 specialP">
+		<a href="https://sunnah.com/ibnmajah" target="_blank"><img src="ibnemaja.jpg" width="150"></a><br>
+		<label for="M-book"><h1 class="mHeading">Sunan Ibne Majah</h1></label><br>
+		<button class="majah btn btn-outline-info" id="M-book">Show Books</button>
+	</div>
+		<br>
+		<div id="maj" class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sunan Ibne Majah Vol 1</h5>
+		    			<p class="card-text">Some quick example text to build o.</p>
+		    			<a href="books/muslim1.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-4 	col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sunan Ibne Majah Vol 2</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/muslim2.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-4 col-sm-6">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sunan Ibne Majah Vol 3</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/muslim3.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  offset-lg-2 col-md-4 col-sm-2">
+					<div class="card" style="width: 18rem;  ">
+			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
+			  			<hr>
+	  				<div class="card-body">
+		    			<h5 class="card-title">Sunan Ibne Majah Vol 4</h5>
+		    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    			<a href="books/muslim5.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  				</div>
+					</div>
+				</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="card" style="width: 18rem;  ">
+				  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
+				  			<hr>
+		  					<div class="card-body">
+				    			<h5 class="card-title">Sunan Ibne Majah Vol 5</h5>
+				    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    			<a href="books/muslim4.html" target="blank" class="btn btn-outline-primary">Read Book</a>
+	  						</div>
+						</div>
+					</div>
+
+
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+<link rel="stylesheet" type="text/css" href="bootdtrap.js">
+<link rel="stylesheet" type="text/css" href="bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="bootstrap.bundle.js">
+<link rel="stylesheet" type="text/css" href="bootstrap.bundle.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+		<!-- Third party plugin JS-->        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
