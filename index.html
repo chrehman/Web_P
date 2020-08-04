@@ -46,9 +46,39 @@
             background: #024EAF;
           }
 
-          /* #mainNav{
-            background-color: rgba(240,248,255,0.2);
-          } */
+
+
+          .dropdown{
+            position: relative;
+          }
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 10px;
+            background-color: rgba(128,128,128,0.4);
+            min-width: 120px;
+            /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+            z-index: 1;
+          }
+
+          .dropdown-content a {
+            text-align: center;
+            color: aliceblue;
+            text-shadow: 3px 3px 8px black,3px 3px 8px snow;
+            padding: 10px 0px;
+            text-decoration: none;
+            display: block;
+          }
+
+          .dropdown-content a:hover {background-color: #f1f1f1}
+
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+
+          .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+          }
         </style>
     </head>
     <body id="page-top">
@@ -64,7 +94,16 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./Quran/Quran.html">Quran</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./hadith.html">Hadith</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./videos/Video.html">Videos</a></li>
+                        <li class="nav-item">
+                          <div class="dropdown">
+                          <span class="nav-link js-scroll-trigger specialLi">Vidoes</span>
+                          <div class="dropdown-content">
+                          <a class="" href="Videos/Video.html">Quran</a>
+                          <a class="" href="hidayah/hidyah.html">Hidayah</a>
+                          <a class="" href="nasheed/nasheed.html">Nasheed</a>
+                          </div>
+                          </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./From/SignIn.php">Login</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" target="blank" href="./Quran/AboutUs.html">About us</a></li>
                     </ul>
