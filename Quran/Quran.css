@@ -1,1 +1,174 @@
- .uff{background-image: linear-gradient(to right,rgba(230,230,250,1),rgba(176,224,230,0.25),rgba(173,216,230,0.2),rgba(135,206,250,0.2),rgba(135,206,235,0.2));}.lil-con{display: block;}.heading-center{display: flex;align-items: center;flex-direction: column;}.hehe{font-size: 180%;}.container{display: flex;justify-content: center;}li{list-style: none;padding: 15px;}div.OsurahC a{text-decoration: none;}div.OsurahC div.surahA{background-color: none;font-size: 100%;transition-property: all;transition-duration: 0.1s;}div.OsurahC div.surahA:hover{text-shadow: 3px 3px 6px white,2px 2px 5px white,-1px 1px 4px white,1px -3px 4px white;font-size: 102.5%;background-color:rgba(169,169,169,0.5);}a span.surah-no{margin-right: 15px;color: #063B7E;}a span.surah-eng{font-weight: 700;font-size: 115%;color: #024EAF;}a span.surah-arb{margin-left: 20px;float: right;color: #212121;font-size: 16px;font-family: 'Amiri', serif;}a span.surah-urdu{clear: both;margin-left: 40px;color: #167AC6;font-size: 90%;}div.OsurahC{}div.surahA{padding: 5px 0px;}::-webkit-scrollbar {width: 10px;}::-webkit-scrollbar-track {background: #f1f1f1;}::-webkit-scrollbar-thumb {background: #167AC6;}::-webkit-scrollbar-thumb:hover {background: #024EAF;}
+
+.uff{
+  clear: both;
+  background-image: linear-gradient(to right,rgba(230,230,250,1),rgba(176,224,230,0.25),rgba(173,216,230,0.2),rgba(135,206,250,0.2),rgba(135,206,235,0.2));
+  /* background-size: cover; */
+  /* background-blend-mode: multiply; */
+  /* background-color: rgba(179, 231, 241,0.06); */
+
+}
+.lil-con{
+  display: block;
+}
+.heading-center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hehe{
+  font-size: 180%;
+  text-decoration: underline overline;
+  
+  /* text-align: center; */
+}
+/* h3+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.container{
+
+  display: flex;
+  justify-content: center;
+}
+li{
+  list-style: none;
+  padding: 15px;
+}
+div.OsurahC a{
+  text-decoration: none;
+}
+div.OsurahC div.surahA{
+  background-color: none;
+  font-size: 100%;
+  transition-property: all;
+  transition-duration: 0.1s;
+
+}
+div.OsurahC div.surahA:hover{
+  text-shadow: 3px 3px 6px white,2px 2px 5px white,-1px 1px 4px white,1px -3px 4px white;
+  font-size: 102.5%;
+  background-color:rgba(169,169,169,0.5);
+}
+a span.surah-no{
+  margin-right: 15px;
+  color: #063B7E;
+}
+a span.surah-eng{
+  font-weight: 700;
+  font-size: 115%;
+  color: #024EAF;
+}
+a span.surah-arb{
+  margin-left: 20px;
+  float: right;
+  font-weight: lighter;
+  color: #212121;
+  font-size: 16px;
+  font-family: 'Amiri', serif;
+}
+a span.surah-urdu{
+  clear: both;
+  margin-left: 40px;
+  color: #167AC6;
+  font-size: 90%;
+
+}
+div.OsurahC{
+  /* margin: 15px 0px; */
+}
+div.surahA{
+  padding: 5px 0px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #167AC6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #024EAF;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 10px;
+  background-color: rgba(128,128,128,0.4);
+  min-width: 120px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 3px 3px 8px black,3px 3px 8px snow;
+  padding: 10px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.specialLi{
+  color: black;
+  text-shadow: 3px 3px 8px black,3px 3px 8px snow;
+}
+.haha{
+  clear: both;
+  float: right;
+}
+.haha ul{
+  display: flex;
+  margin-top: -25px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.haha ul li{
+  font-size: 20px;
+  /* padding: 15px; */
+}
+.haha ul li a{
+  text-decoration: none;
+}
+.hmm{
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+
+  text-decoration: none;
+  float: left;
+}
+.hmm a{
+  font-size: 38px;
+  text-decoration: none;
+}
+body{
+  background-color: #d0d0d0;
+}
+.kmp{
+  box-shadow: 3px 0px 0px black;
+}
+*{
+  margin: 0;
+}
