@@ -12,26 +12,18 @@
 			<link href="./css/styles.css" rel="stylesheet" />
 	<style type="text/css">
 		body{
-			/* background-color: rgba(178, 243, 238,0.1); */
-			background: linear-gradient(rgb(176,224,230),rgb(173,216,230),rgb(135,206,250),rgb(135,206,235));
+			background-color: #d0d0d0;
+
 			font-family: "Times Roman";
 
 		}
-		.greeting{
-			text-align: center;
-			border-right: 3px solid;
-			border-bottom: 3px solid;
-			width: 30%;
-			font-size: 380%;
-			background-color: rgba(30,144,255,0.1);
-			color: rgba(0,0,128,0.4);
-		}
+
 		.important-cheez{
+			border-top: 2px solid #696969	;
+			background: linear-gradient(rgb(176,224,230),rgb(173,216,230),rgb(135,206,250),rgb(135,206,235));
+			clear: both;
 			height: 100%;
 			text-align: center;
-
-
-
 		}
 		img{
 			border: 2px solid rgba(58, 145, 26,0.6);
@@ -87,35 +79,109 @@
 		#buk,#tir,#maj,#mus{
 			display: none;
 		}
+		.dropdown{
+		  position: relative;
+		}
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  left: 10px;
+		  background-color: rgba(128,128,128,0.4);
+		  min-width: 120px;
+		  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+		  z-index: 1;
+		}
 
+		.dropdown-content a {
+		  text-align: center;
+		  color: aliceblue;
+		  text-shadow: 3px 3px 8px black,3px 3px 8px snow;
+		  padding: 10px 0px;
+		  text-decoration: none;
+		  display: block;
+		}
+
+		.dropdown-content a:hover {background-color: #f1f1f1}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+
+		.dropdown:hover .dropbtn {
+		  background-color: #3e8e41;
+		}
+		.specialLi{
+		  color: black;
+		  text-shadow: 3px 3px 8px black,3px 3px 8px snow;
+		}
+		.haha{
+		  clear: both;
+		  float: right;
+		}
+		.haha ul{
+		  display: flex;
+		  margin-top: -30px;
+		  margin-bottom: 10px;
+		  margin-right: 10px;
+		}
+		.haha ul li{
+			list-style: none;
+		  font-size: 20px;
+		  padding-right: 40px;
+		}
+		.haha ul li a{
+		  text-decoration: none;
+		}
+		.hmm{
+		  margin-left: 35px;
+		  margin-top: 10px;
+		  margin-bottom: -10px;
+
+		  text-decoration: none;
+		  float: left;
+		}
+		.hmm a{
+		  font-size: 38px;
+		  text-decoration: none;
+		}
+		.kmp{
+			width: 100%;
+			background: #d0d0d0;
+		}
 	</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light " >
-		<div class="container">
-			
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				Menu
-				<i class="fas fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./index.html">Home</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./Quran/Quran.html">Quran</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./videos/Video.html">Tilawat</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./hadith.html">Hadith</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./hidayah/hidyah.html">Hidayah</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./nasheed/nasheed.html">Naat/Nasheed</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./From/SignIn.php">Login</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" target="blank" href="./Quran/AboutUs.html">About us</a></li>
-				</ul>
+	<div class="kmp">
+	<nav>
+			<div class="navi">
+				<div class="hmm">
+					<img src="hidayah.jpg" alt="hidayah picture" width="40" height="40px">
+					<a class="specialLi" href="index.html">Hidayah Portal</a>
+				</div>
+					<div class="haha">
+							<ul>
+									<li class=""><a class="specialLi" href="Quran/Quran.html">Quran</a></li>
+									<li class=""><a class="specialLi" href="hadith.html">Hadith</a></li>
+									<li class="">
+										<div class="dropdown">
+										<span class="specialLi">Vidoes</span>
+										<div class="dropdown-content">
+										<a class="" href="Videos/Video.html">Quran</a>
+										<a class="" href="hidayah/hidyah.html">Hidayah</a>
+										<a class="" href="nasheed/nasheed.html">Nasheed</a>
+										</div>
+										</div>
+									</li>
+									<li class=""><a class="specialLi" href="From/SignIn.php">Login</a></li>
+									<li class=""><a class=" specialLi" target="blank" href="Quran/AboutUs.html">About us</a></li>
+							</ul>
+					</div>
 			</div>
-		</div>
-	 </nav>
-	<div class="greeting">
-		Hadith Books
-	</div>
+
+	</nav>
+</div>
+
+
 	<div class="important-cheez">
 		<div class="abdulR1">
 		<a href="https://sunnah.com/bukhari" target="_blank"><img src="download.jpg" width="130px"></a><br>
@@ -126,7 +192,7 @@
 		<div id ="buk" class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -137,7 +203,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -148,7 +214,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -160,7 +226,7 @@
 				</div>
 
 				<div class="col-lg-3 col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -172,7 +238,7 @@
 				</div>
 
 					<div class="col-lg-3 offset-lg-3 col-md-4 col-sm-6">
-						<div class="card" style="width: 18rem;  ">
+						<div class="card" style="width: 16rem;  ">
 				  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
 				  			<hr>
 		  					<div class="card-body">
@@ -184,7 +250,7 @@
 					</div>
 
 					<div class="col-lg-3 offset-lg-0 col-md-4 col-sm-6">
-						<div class="card" style="width: 18rem;  ">
+						<div class="card" style="width: 16rem;  ">
 				  			<img class="card-img-top" src="download.jpg" alt="Card image cap" style=" height:16rem ;">
 				  			<hr>
 		  					<div class="card-body">
@@ -206,7 +272,7 @@
 		<div id="mus"class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -217,7 +283,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 	col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -228,7 +294,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4  col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -240,7 +306,7 @@
 				</div>
 
 				<div class="col-lg-4  offset-lg-2 col-md-4 col-sm-2">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -252,7 +318,7 @@
 				</div>
 
 					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="card" style="width: 18rem;  ">
+						<div class="card" style="width: 16rem;  ">
 				  			<img class="card-img-top" src="sahihmuslim.jpg" alt="Card image cap" style=" height:16rem ;">
 				  			<hr>
 		  					<div class="card-body">
@@ -279,7 +345,7 @@
 		<div id="tir"class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 ">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="tirmizi.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -290,7 +356,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 	col-md-4 ">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="tirmizi.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -317,7 +383,7 @@
 		<div id="maj" class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -328,7 +394,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 	col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -339,7 +405,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4  col-md-4 col-sm-6">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -351,7 +417,7 @@
 				</div>
 
 				<div class="col-lg-4  offset-lg-2 col-md-4 col-sm-2">
-					<div class="card" style="width: 18rem;  ">
+					<div class="card" style="width: 16rem;  ">
 			  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
 			  			<hr>
 	  				<div class="card-body">
@@ -363,7 +429,7 @@
 				</div>
 
 					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="card" style="width: 18rem;  ">
+						<div class="card" style="width: 16rem;  ">
 				  			<img class="card-img-top" src="ibnemaja.jpg" alt="Card image cap" style=" height:16rem ;">
 				  			<hr>
 		  					<div class="card-body">
@@ -391,7 +457,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-		<!-- Third party plugin JS-->        
+		<!-- Third party plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 		<!-- Core theme JS-->
 <script src="js/scripts.js"></script>

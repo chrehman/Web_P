@@ -32,7 +32,7 @@ body {
   margin: 8px;
   background: #E8E8E8;
   border-radius: 15px;
-  padding: 14px 0px;
+  padding: 19px 0px 14px;
   filter: grayscale(100%);
   transform: scale(1,1);
   transition-property: filter, transform,box-shadow;
@@ -50,7 +50,7 @@ img {
     margin-right: auto;
     clip-path: circle(60% at 50% 50%);
     border: 5px solid #ddd;
-    padding: 5px 5px 0px 5px;
+    padding: 5px;
 
   }
 .container{
