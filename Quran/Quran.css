@@ -18,7 +18,7 @@
 .hehe{
   font-size: 180%;
   text-decoration: underline overline;
-  
+
   /* text-align: center; */
 }
 /* h3+img{
@@ -146,13 +146,13 @@ div.surahA{
 }
 .haha ul li{
   font-size: 20px;
-  /* padding: 15px; */
+  padding-right: 35px;
 }
 .haha ul li a{
   text-decoration: none;
 }
 .hmm{
-  margin-left: 40px;
+  margin-left: 35px;
   margin-top: 10px;
   margin-bottom: -10px;
 
