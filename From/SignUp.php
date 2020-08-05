@@ -10,7 +10,7 @@ $conn=mysqli_connect($server,$username,$pass,$dbname);
 if($conn===false){  
     $conn=mysqli_connect($server,$username,$pass);
     
-    $sql="CREATE DATABASE demo1";
+    $sql="CREATE DATABASE demo";
     $result=mysqli_query($conn,$sql);
    
     if($result===true){
