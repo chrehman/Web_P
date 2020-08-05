@@ -7,14 +7,14 @@ $dbname="demo";
 
 $conn=mysqli_connect($server,$username,$pass,$dbname);
 
-if($conn===false){  
+if($conn===false){
     $conn=mysqli_connect($server,$username,$pass);
-    
+
     $sql="CREATE DATABASE demo";
     $result=mysqli_query($conn,$sql);
-   
+
     if($result===true){
-        $conn=mysqli_connect($server,$username,$pass,$dbname);    
+        $conn=mysqli_connect($server,$username,$pass,$dbname);
     }else {
         die("ERROR:Could not connect. ".mysqli_connect_error());
     }
@@ -33,13 +33,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(!(preg_match("/^([a-zA-Z' ]+)$/",$name))){
             $nameErr="Only letters and white spaces are allowed";
 
-        
+
         }
-        
-        
+
+
 
     }
-    
+
     ////email checking/////////
     if(empty($_POST['email'])){
         $emailErr="email must be required";
@@ -47,25 +47,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $email=test_input($_POST['email']);
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $emailErr="Invalid email format";
-        
+
         }
         else{
             $sql="SELECT * FROM usersss WHERE email='$email'";
 
             $result=mysqli_query($conn,$sql);
-           
-            if($result===false){
-                $sql="CREATE TABLE usersss (
-                    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                    name VARCHAR(255) NOT NULL,
-                    password VARCAHR(255) NOT NULL,
-                    email VARCHAR(255)NOT NULL UNIQUE
-                    
-                    )";
-                    $sql="SELECT * FROM userssss WHERE email='$email'";
 
-                    $result=mysqli_query($conn,$sql);
-            }
+
             $count=mysqli_num_rows($result);
             if($count>0){
                 $emailErr="Email alreday exists";
@@ -80,9 +69,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
      else {
         $password=test_input($_POST['pass']);
-        
+
         }
-    
+
     if(empty($_POST['re_pass'])){
         $cnpasswordErr="Please enter password";
     } else {
@@ -90,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if($password!=$cnpassword){
             $cnpasswordErr="Password did not match";
         }
-        
+
     }
     //cheking checkbox///
 
@@ -115,16 +104,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             mysqli_close($conn);
 
            //}
-                
-        }
-        
-    
-    }
-        
-  
 
-    
-    
+        }
+
+
+    }
+
+
+
+
+
 }
 
 function test_input($data){
@@ -155,7 +144,7 @@ function test_input($data){
     <title>Sign Up Form by Colorlib</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="./fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="./css/style.css">
@@ -194,7 +183,7 @@ function test_input($data){
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/><span class="reg"> <?php echo $signup?></span>
                             </div>
-                            
+
                         </form>
                     </div>
                     <div class="signup-image">
@@ -205,7 +194,7 @@ function test_input($data){
             </div>
         </section>
 
-    
+
 
     </div>
 
@@ -215,4 +204,3 @@ function test_input($data){
     <script src="js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
-
