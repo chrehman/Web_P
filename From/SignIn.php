@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     $_SESSION["login"]=true;
                     
 
-                    header("Location:./index.html");
+                    header("Location:../index.html");
                 } else{
                     $passwordErr="Wrong Password";
                 }
