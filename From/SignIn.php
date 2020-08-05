@@ -11,6 +11,9 @@ $dbname="demo";
 
 $conn=mysqli_connect($server,$username,$pass,$dbname);
 
+
+
+
 if($conn===false){
     die("ERROR:Could not connect. ".mysqli_connect_error());
 }
@@ -41,8 +44,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $count=mysqli_num_rows($result);
                 if($count>0){
                     $password='';
-                    session_abort();
-                    session_start();
+                    $sql="SELECT name FROM usersss WHERE email='$email'AND password='$password'";
+                    $result=mysqli_query($conn,$sql);
+                    $_SESSION["email"]=$email;
+                    $_SESSION["name"]=$result;
+                    $_SESSION["login"]=true;
+                    
 
                     header("Location:./index.html");
                 } else{

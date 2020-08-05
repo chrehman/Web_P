@@ -7,10 +7,18 @@ $dbname="demo";
 
 $conn=mysqli_connect($server,$username,$pass,$dbname);
 
-if($conn===false){
-    die("ERROR:Could not connect. ".mysqli_connect_error());
+if($conn===false){  
+    $conn=mysqli_connect($server,$username,$pass);
+    
+    $sql="CREATE DATABASE demo1";
+    $result=mysqli_query($conn,$sql);
+   
+    if($result===true){
+        $conn=mysqli_connect($server,$username,$pass,$dbname);    
+    }else {
+        die("ERROR:Could not connect. ".mysqli_connect_error());
+    }
 }
-
 
 $emailErr=$passwordErr=$nameErr=$cnpasswordErr=$chekboxErr=$signupErr="";
 $email=$password=$name=$cnpassword=$chekbox=$signup="";
@@ -43,7 +51,21 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         }
         else{
             $sql="SELECT * FROM usersss WHERE email='$email'";
+
             $result=mysqli_query($conn,$sql);
+           
+            if($result===false){
+                $sql="CREATE TABLE usersss (
+                    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                    name VARCHAR(255) NOT NULL,
+                    password VARCAHR(255) NOT NULL,
+                    email VARCHAR(255)NOT NULL UNIQUE
+                    
+                    )";
+                    $sql="SELECT * FROM userssss WHERE email='$email'";
+
+                    $result=mysqli_query($conn,$sql);
+            }
             $count=mysqli_num_rows($result);
             if($count>0){
                 $emailErr="Email alreday exists";
@@ -136,7 +158,7 @@ function test_input($data){
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -177,7 +199,7 @@ function test_input($data){
                     </div>
                     <div class="signup-image">
                         <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="SignIn.php" class="signup-image-link">I am already member</a>
+                        <a href="./SignIn.php" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>
