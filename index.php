@@ -1,3 +1,15 @@
+<?php  
+session_start();
+if(isset($_SESSION['login'])){
+    $_SESSION["login"]=true;
+    
+} else {
+    $_SESSION["login"]=false;
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -101,9 +113,11 @@
                           <a class="" href="Videos/Video.html">Quran</a>
                           <a class="" href="hidayah/hidyah.html">Hidayah</a>
                           <a class="" href="nasheed/nasheed.html">Nasheed</a>
+                          
                           </div>
                           </div>
                         </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./product/index1.php ">Products</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" href="./From/SignIn.php">Login</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger specialLi" target="blank" href="./Quran/AboutUs.html">About us</a></li>
                     </ul>

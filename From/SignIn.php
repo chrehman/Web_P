@@ -1,6 +1,23 @@
 <?php
 
 session_start();
+if($_SESSION["login"]==true){
+    //function_alert("Already Login");
+    echo "<script>
+    alert('Already login ');
+    window.location.href='../product/index1.php';
+    </script>";
+    
+}
+
+if($_SESSION["login"]==true){
+  //  echo '<script> alert ("Already login")</script>';
+    //header("Location: ../product/index1.php");
+}
+function function_alert($msg) {
+    echo "<script type='text/javascript'>alert('$msg');</script>";
+   
+}
 $emailErr=$passwordErr="";
 $email=$password=$name=$cnpassword=$chekbox="";
 
@@ -11,12 +28,28 @@ $dbname="demo";
 
 $conn=mysqli_connect($server,$username,$pass,$dbname);
 
+if($conn===false){//Creating Database if not exists
+    $conn=mysqli_connect($server,$username,$pass);
 
+    $sql="CREATE DATABASE demo";
+    $result=mysqli_query($conn,$sql);
 
-
-if($conn===false){
-    die("ERROR:Could not connect. ".mysqli_connect_error());
+    if($result===true){
+        $conn=mysqli_connect($server,$username,$pass,$dbname);
+    }else {
+        die("ERROR:Could not connect. ".mysqli_connect_error());
+    }
 }
+//Creating Table if not Exists////
+$sql="CREATE TABLE IF NOT EXISTS demo.user (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255)NOT NULL UNIQUE
+    
+    )";
+
+mysqli_query($conn,$sql);
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     ////email checking/////////
@@ -35,23 +68,22 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }else {
         $password=test_input($_POST['pass']);
         if(isset($_POST['signin'])){
-            $sql="SELECT * FROM usersss WHERE email='$email'";
+            $sql="SELECT * FROM user WHERE email='$email'";
             $result=mysqli_query($conn,$sql);
             $count=mysqli_num_rows($result);
             if($count>0){
-                $sql="SELECT * FROM usersss WHERE email='$email'AND password='$password'";
+                $sql="SELECT * FROM user WHERE email='$email'AND password='$password'";
                 $result=mysqli_query($conn,$sql);
                 $count=mysqli_num_rows($result);
                 if($count>0){
                     $password='';
-                    $sql="SELECT name FROM usersss WHERE email='$email'AND password='$password'";
-                    $result=mysqli_query($conn,$sql);
+                
                     $_SESSION["email"]=$email;
                     $_SESSION["name"]=$result;
                     $_SESSION["login"]=true;
                     
 
-                    header("Location:../index.html");
+                    header("Location: ../product/index1.php");
                 } else{
                     $passwordErr="Wrong Password";
                 }
@@ -79,15 +111,19 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Sign In</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/error.css">
 </head>
 <body>
+
+    <h1 class="heading">Hidayah Portal login</h1>
+    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="50px" height="50px">
 
     <div class="main">
 
@@ -97,7 +133,7 @@ mysqli_close($conn);
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <figure><img src="images/pic5.jpg"  height ="500px"alt="sing up image"></figure>
                         <a href="SignUp.php" class="signup-image-link">Create an account</a>
                     </div>
 
@@ -138,5 +174,5 @@ mysqli_close($conn);
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

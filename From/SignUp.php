@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $server="localhost";
 $username="root";
 $pass="root";
@@ -7,7 +7,7 @@ $dbname="demo";
 
 $conn=mysqli_connect($server,$username,$pass,$dbname);
 
-if($conn===false){
+if($conn===false){//Creating Database if not exists
     $conn=mysqli_connect($server,$username,$pass);
 
     $sql="CREATE DATABASE demo";
@@ -19,6 +19,17 @@ if($conn===false){
         die("ERROR:Could not connect. ".mysqli_connect_error());
     }
 }
+//Creating Table if not Exists////
+$sql="CREATE TABLE IF NOT EXISTS demo.user (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255)NOT NULL UNIQUE
+    
+    )";
+
+mysqli_query($conn,$sql);
+
 
 $emailErr=$passwordErr=$nameErr=$cnpasswordErr=$chekboxErr=$signupErr="";
 $email=$password=$name=$cnpassword=$chekbox=$signup="";
@@ -50,11 +61,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
         }
         else{
-            $sql="SELECT * FROM usersss WHERE email='$email'";
-
+            $sql="SELECT * FROM user WHERE email='$email'";
             $result=mysqli_query($conn,$sql);
-
-
             $count=mysqli_num_rows($result);
             if($count>0){
                 $emailErr="Email alreday exists";
@@ -89,16 +97,24 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     else{
         if(isset($_POST['signup']) ){
           // if(empty($nameErr) && empty($emailErr) && empty($password)&& empty($cnpasswordErr)){
-            $sql="INSERT INTO usersss (name,email,password)
-            VALUES('$name','$email','$password')";
+            if(!empty($password)){
+                $sql="INSERT INTO user (name,email,password)
+                VALUES('$name','$email','$password')";
 
 
 
-            if($result=mysqli_query($conn,$sql)){
-            $signup="Register Succesfully";
+                if($result=mysqli_query($conn,$sql)){
+                    echo '<script> alert("Register Succesfully")</script>'; 
+                    $signup="Register Succesfully";
+                     
+                     //header("Location: ./SignIn.php");
+                } else {
+                    echo "ERROR : $sql ".mysqli_error($conn);
+                 }
             } else {
-            echo "ERROR : $sql ".mysqli_error($conn);
+                $passwordErr="Please Enter password ";
             }
+            
 
 
             mysqli_close($conn);
@@ -141,15 +157,19 @@ function test_input($data){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Sign Up </title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="./fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/error.css">
 </head>
 <body>
+    <h1 class="heading">Hidayah Portal Registration</h1>
+    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="50px" height="50px">
+
 
     <div class="main">
 
@@ -202,5 +222,5 @@ function test_input($data){
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

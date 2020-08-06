@@ -1,0 +1,38 @@
+.signup-image-link:hover{
+    color:blue;
+}
+figure{
+    position: relative;
+    top:10px;
+}
+
+.head-span{
+    text-align: center;
+}
+
+.heading{
+    display: inline-block;
+    
+    margin-left:500px;
+    vertical-align:top;
+    text-align: center;   
+    font-size:2rem; 
+}
+.hidayah{
+    margin-left: 10px;
+    margin-top:25px;
+    text-align: center;
+}
+.main{
+    margin-top: 0px;
+    padding-top:50px;
+}
+.error{
+    color:red;
+}
+
+.reg{
+    color: darkred;
+    font-size: 3rem;
+    font-weight: bold;
+}
