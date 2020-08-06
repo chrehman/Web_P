@@ -5,7 +5,12 @@ $db_handle = new DBController();
 if($_SESSION["login"]===false){
 	header("Location: ../From/SignIn.php");
 }
+$server="localhost";
+$username="root";
+$pass="root";
+$dbname="demo";
 
+$conn=mysqli_connect($server,$username,$pass,$dbname);
 
 $sql="CREATE TABLE IF NOT EXISTS demo.tblproduct (
   `id` int(8) NOT NULL,
