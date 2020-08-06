@@ -123,7 +123,7 @@ mysqli_close($conn);
 <body>
 <div class="lll">
     <h1 class="heading">Hidayah Portal login</h1>
-    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="50px" height="50px">
+    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="40px" height="35px">
 </div>
     <div class="main">
 

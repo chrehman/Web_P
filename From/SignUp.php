@@ -169,8 +169,8 @@ function test_input($data){
 </head>
 <body>
   <div class="lll">
-    <h1 class="heading_m">Hidayah Portal Registration</h1>
-    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="50px" height="50px">
+    <h1 class="heading">Hidayah Portal Registration</h1>
+    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="40px" height="35px">
 
 </div>
     <div class="main">

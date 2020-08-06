@@ -15,6 +15,12 @@ figure{
   justify-content: center;
   align-items: center;
 }
+.heading{
+  font-size: 33px;
+}
+img{
+  margin-bottom: 18px;
+}
 .hidayah{
     margin-left: 10px;
     margin-top:25px;
