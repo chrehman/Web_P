@@ -39,7 +39,13 @@ INSERT INTO `tblproduct` (`id`, `name`, `code`, `image`, `price`) VALUES
 (22, 'Etar-2', 'pr002', 'product-images/p2.jpg', 22.00),
 (23, 'Etar-3', 'pr003', 'product-images/p3.jpg', 25.00),
 (24, 'Etar-4', 'pr004', 'product-images/p4.jpg', 25.00),
-(25, 'Etar-5', 'pr005', 'product-images/p5.jpg', 30.00);
+(25, 'Etar-5', 'pr005', 'product-images/p5.jpg', 30.00),
+(26, 'Tasbeeh-1', 't001', 'product-images/1.jpg', 7.00),
+(27, 'Tasbeeh-2', 't002', 'product-images/2.jpg', 9.00),
+(28, 'Tasbeeh-3', 't003', 'product-images/3.jpg', 10.00),
+(29, 'Tasbeeh-4', 't004', 'product-images/4.jpg', 8.00),
+(30, 'Tasbeeh-5', 't005', 'product-images/5.jpg', 15.00),
+;
 --
 -- Indexes for table `tblproduct`
 --
