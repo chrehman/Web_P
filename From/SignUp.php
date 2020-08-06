@@ -25,7 +25,7 @@ $sql="CREATE TABLE IF NOT EXISTS demo.user (
     name VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255)NOT NULL UNIQUE
-    
+
     )";
 
 mysqli_query($conn,$sql);
@@ -104,9 +104,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 
                 if($result=mysqli_query($conn,$sql)){
-                    echo '<script> alert("Register Succesfully")</script>'; 
+                    echo '<script> alert("Register Succesfully")</script>';
                     $signup="Register Succesfully";
-                     
+
                      //header("Location: ./SignIn.php");
                 } else {
                     echo "ERROR : $sql ".mysqli_error($conn);
@@ -114,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             } else {
                 $passwordErr="Please Enter password ";
             }
-            
+
 
 
             mysqli_close($conn);
@@ -165,12 +165,14 @@ function test_input($data){
     <!-- Main css -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="css/error.css">
+
 </head>
 <body>
-    <h1 class="heading">Hidayah Portal Registration</h1>
+  <div class="lll">
+    <h1 class="heading_m">Hidayah Portal Registration</h1>
     <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="50px" height="50px">
 
-
+</div>
     <div class="main">
 
         <!-- Sign up form -->

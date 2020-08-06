@@ -10,13 +10,10 @@ figure{
     text-align: center;
 }
 
-.heading{
-    display: inline-block;
-    
-    margin-left:500px;
-    vertical-align:top;
-    text-align: center;   
-    font-size:2rem; 
+.lll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hidayah{
     margin-left: 10px;
