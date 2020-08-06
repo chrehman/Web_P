@@ -21,7 +21,7 @@ $sql="CREATE TABLE IF NOT EXISTS demo.tblproduct (
 
 
     )";
-$sql="ALTER TABLE `tblproduct`
+$sql="ALTER TABLE tblproduct
 ADD PRIMARY KEY (`id`),
 ADD UNIQUE KEY `product_code` (`code`)";
 mysqli_query($conn,$sql);
@@ -30,19 +30,19 @@ $sql="ALTER TABLE `tblproduct`
 MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT";
 mysqli_query($conn,$sql);
-$sql="INSERT INTO `tblproduct` (`id`, `name`, `code`, `image`, `price`) VALUES
+$sql="INSERT INTO tblproduct (id, name, code, image, price) VALUES
 (1, 'Quran Pak', 'q001', 'product-images/q1.jpg', 5.00),
-(2, 'Quran Pak', 'q002', 'product-images/q2.jpg', 5.00),
+(2, 'Quran Pak', 'q002', 'product-images/quran.jpg', 5.00),
 (3, 'Quran Pak', 'q003', 'product-images/q3.jpg', 7.00),
 (4, 'Prayer Mat Blue', 'p001', 'product-images/n1.jpg', 25.00),
 (5, 'Prayer Mat Green', 'p002', 'product-images/n2.jpg', 20.00),
 (6, 'Prayer Mat Red', 'p003', 'product-images/n3.jpg', 20.00),
-(7, 'Prayer Mat Red', 'p001', 'product-images/n1.jpg', 15.00),
+(7, 'Prayer Mat Red', 'p004', 'product-images/n4.jpg', 15.00),
 (8, 'Black Cap', 'c001', 'product-images/c1.jpg', 10.00),
 (9, 'Simple White Cap', 'c002', 'product-images/c2.jpg', 5.00),
 (10, 'Simple Black Cap', 'c003', 'product-images/c3.jpg', 7.00),
 (11, 'White Cap', 'c004', 'product-images/c4.jpg', 7.00),
-(12, 'J dot Cap', 'c001', 'product-images/c5.jpg', 10.00),
+(12, 'J dot Cap', 'c005','product-images/c5.jpg', 10.00),
 (13, 'Miswak-1', 'm001', 'product-images/m1.jpg', 5.00),
 (14, 'Miswak-2', 'm002', 'product-images/m2.jpg', 6.00),
 (15, 'Miswak-3', 'm003', 'product-images/m3.jpg', 9.00),
@@ -60,7 +60,7 @@ $sql="INSERT INTO `tblproduct` (`id`, `name`, `code`, `image`, `price`) VALUES
 (27, 'Tasbeeh-2', 't002', 'product-images/2.jpg', 9.00),
 (28, 'Tasbeeh-3', 't003', 'product-images/3.jpg', 10.00),
 (29, 'Tasbeeh-4', 't004', 'product-images/4.jpg', 8.00),
-(30, 'Tasbeeh-5', 't005', 'product-images/5.jpg', 15.00),
+(30, 'Tasbeeh-5', 't005', 'product-images/5.jpg', 15.00)
 ";
 mysqli_query($conn,$sql);
 
@@ -73,7 +73,7 @@ switch($_GET["action"]) {
 		if(!empty($_POST["quantity"])) {
 			$productByCode = $db_handle->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
 			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));
-			
+
 			if(!empty($_SESSION["cart_item"])) {
 				if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
 					foreach($_SESSION["cart_item"] as $k => $v) {
@@ -96,7 +96,7 @@ switch($_GET["action"]) {
 		if(!empty($_SESSION["cart_item"])) {
 			foreach($_SESSION["cart_item"] as $k => $v) {
 					if($_GET["code"] == $k)
-						unset($_SESSION["cart_item"][$k]);				
+						unset($_SESSION["cart_item"][$k]);
 					if(empty($_SESSION["cart_item"]))
 						unset($_SESSION["cart_item"]);
 			}
@@ -104,7 +104,7 @@ switch($_GET["action"]) {
 	break;
 	case "empty":
 		unset($_SESSION["cart_item"]);
-	break;	
+	break;
 }
 }
 ?>
@@ -133,7 +133,7 @@ switch($_GET["action"]) {
 if(isset($_SESSION["cart_item"])){
     $total_quantity = 0;
     $total_price = 0;
-?>	
+?>
 <table class="tbl-cart" cellpadding="10" cellspacing="1">
 <tbody>
 <tr>
@@ -143,8 +143,8 @@ if(isset($_SESSION["cart_item"])){
 <th style="text-align:right;" width="10%">Unit Price</th>
 <th style="text-align:right;" width="10%">Price</th>
 <th style="text-align:center;" width="5%">Remove</th>
-</tr>	
-<?php		
+</tr>
+<?php
     foreach ($_SESSION["cart_item"] as $item){
         $item_price = $item["quantity"]*$item["price"];
 		?>
@@ -172,26 +172,26 @@ if(isset($_SESSION["cart_item"])){
 	<td colspan="6" align="right"><button><a href="payment.html">Pay Amount</a></button></td>
 </tr>
 </tbody>
-</table>		
+</table>
   <?php
 } else {
 ?>
 <div class="no-records">Your Cart is Empty</div>
-<?php 
+<?php
 }
 ?>
 </div>
 
 <div class="container">
-    
-    
-            
+
+
+
 	<?php
 	$product_array = $db_handle->runQuery("SELECT * FROM tblproduct ORDER BY id ASC");
-	if (!empty($product_array)) { 
+	if (!empty($product_array)) {
 		foreach($product_array as $key=>$value){
     ?>
-<div class="row">    
+<div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="product-grid6">
                 <form method="post" action="index1.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
@@ -210,15 +210,15 @@ if(isset($_SESSION["cart_item"])){
                     </form>
             </div>
         </div>
-            
-      </  
+
+      </
 	<?php
 		}
 	}
 	?>
     </div>
-</div>   
+</div>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </BODY>
 </HTML>
