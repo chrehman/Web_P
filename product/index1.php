@@ -5,6 +5,20 @@ $db_handle = new DBController();
 if($_SESSION["login"]===false){
 	header("Location: ../From/SignIn.php");
 }
+
+
+$sql="CREATE TABLE IF NOT EXISTS demo.tblproduct (
+  `id` int(8) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `code` varchar(255) NOT NULL,
+  `image` text NOT NULL,
+  `price` double(10,2) NOT NULL
+
+
+    )";
+
+mysqli_query($conn,$sql);
+
 if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
 	case "add":
