@@ -7,7 +7,7 @@ if($_SESSION["login"]==true){
     alert('Already login ');
     window.location.href='../product/index1.php';
     </script>";
-    
+
 }
 
 if($_SESSION["login"]==true){
@@ -16,7 +16,7 @@ if($_SESSION["login"]==true){
 }
 function function_alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
-   
+
 }
 $emailErr=$passwordErr="";
 $email=$password=$name=$cnpassword=$chekbox="";
@@ -46,7 +46,7 @@ $sql="CREATE TABLE IF NOT EXISTS demo.user (
     name VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255)NOT NULL UNIQUE
-    
+
     )";
 
 mysqli_query($conn,$sql);
@@ -60,8 +60,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $emailErr="Invalid email format";
         }
-       
-        
+
+
     }
     if(empty($_POST['pass'])){
         $passwordErr="Please enter your password";
@@ -77,11 +77,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $count=mysqli_num_rows($result);
                 if($count>0){
                     $password='';
-                
+
                     $_SESSION["email"]=$email;
                     $_SESSION["name"]=$result;
                     $_SESSION["login"]=true;
-                    
+
 
                     header("Location: ../product/index1.php");
                 } else{
@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $emailErr="Email does not exist";
             }
          }
-        
+
 
     }
 }
@@ -121,10 +121,10 @@ mysqli_close($conn);
     <link rel="stylesheet" href="css/error.css">
 </head>
 <body>
-
+<div class="lll">
     <h1 class="heading">Hidayah Portal login</h1>
-    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="50px" height="50px">
-
+    <img class="hidayah" src="../hidayah.jpg" alt="Hidayah-portal-img" width="40px" height="35px">
+</div>
     <div class="main">
 
 
