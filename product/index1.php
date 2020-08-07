@@ -116,16 +116,60 @@ switch($_GET["action"]) {
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link href="./style.css" type="text/css" rel="stylesheet" />
 <link href="./style1.css" type="text/css" rel="stylesheet" />
+<link href="./style.css" type="text/css" rel="stylesheet" />
+<style media="screen">
+.button9248 {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #008080;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+	padding: 10px 20px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+.pls{
+	text-shadow: 0px 0px 2px dodgerblue;
+ }
+.button9248 .pls {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button9248 .pls:after {
+	content: '\00AB';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: -20px;
+	transition: 0.5s;
+}
+
+.button9248:hover .pls {
+	padding-left: 25px;
+}
+
+.button9248:hover .pls:after {
+	opacity: 1;
+	left: 0;
+}
+
+</style>
 </HEAD>
 <BODY>
 
-<h3 style="font-size:2rem;font-weight:bold">Hidayah Shopping Center </h3>
+<h3 style="font-size:2.5rem;font-weight:bold;text-decoration:underline">Hidayah Shopping Center </h3>
 
 <form action="../index.php">
-    <input class="back" type="submit" value="Back to home" />
+    <button class="button9248" style="vertical-align:middle"><span class="pls">back to home </span></button>
 </form>
+
 <div id="shopping-cart">
 <div class="txt-heading">Shopping Cart</div>
 
