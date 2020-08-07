@@ -119,10 +119,17 @@ switch($_GET["action"]) {
 <link href="./style1.css" type="text/css" rel="stylesheet" />
 <link href="./style.css" type="text/css" rel="stylesheet" />
 <style media="screen">
+BODY{
+	background: lavender;
+
+}
 .button9248 {
+	position: absolute;
+	top:0;
+	left:0;
 	display: inline-block;
-	border-radius: 4px;
-	background-color: #008080;
+	border-radius: 2px;
+	background-color: #167AC6;
 	border: none;
 	color: #FFFFFF;
 	text-align: center;
@@ -159,19 +166,46 @@ switch($_GET["action"]) {
 	opacity: 1;
 	left: 0;
 }
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #167AC6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #024EAF;
+}
+.raju{
+	font-size:2.5rem;
+	font-weight:bold;
+	color: White;
+	text-shadow: 0px 0px 5px black;
+	text-align: center;
+	margin: 10px;
+	/* text-decoration:underline; */
+}
 </style>
 </HEAD>
 <BODY>
 
-<h3 style="font-size:2.5rem;font-weight:bold;text-decoration:underline">Hidayah Shopping Center </h3>
+<h3 class="raju">Hidayah Shopping Center </h3>
 
 <form action="../index.php">
     <button class="button9248" style="vertical-align:middle"><span class="pls">back to home </span></button>
 </form>
 
 <div id="shopping-cart">
-<div class="txt-heading">Shopping Cart</div>
+<div class="txt-heading"><h3>Shopping Cart<h3></div>
 
 <a id="btnEmpty" href="index1.php?action=empty">Empty Cart</a>
 <?php
