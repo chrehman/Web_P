@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if($_SESSION["login"]==true){
+if($_SESSION["login"]===true){
     //function_alert("Already Login");
     echo "<script>
     alert('Already login ');

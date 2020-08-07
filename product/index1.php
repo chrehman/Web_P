@@ -20,12 +20,13 @@ $sql="CREATE TABLE IF NOT EXISTS demo.tblproduct (
   `price` double(10,2) NOT NULL
 
 
-    )";
+	)";
+	mysqli_query($conn,$sql);
 $sql="ALTER TABLE tblproduct
 ADD PRIMARY KEY (`id`),
 ADD UNIQUE KEY `product_code` (`code`)";
 mysqli_query($conn,$sql);
-mysqli_query($conn,$sql);
+
 $sql="ALTER TABLE `tblproduct`
 MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT";
