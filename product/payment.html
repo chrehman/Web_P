@@ -3,12 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thank You</title>
+    <style media="screen">
+    body{
+      background: lavender;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      }
+      h1{
+        font-size:2.8rem;
+        color: midnightblue;
+
+      }
+      .aoji{
+        display: flex;
+        justify-content: center;
+      }
+      .button9248 {
+      	display: inline-block;
+      	border-radius: 2px;
+      	background-color: navy;
+      	border: none;
+      	color: #FFFFFF;
+      	text-align: center;
+      	font-size: 16px;
+      	padding: 10px 20px;
+      	transition: all 0.5s;
+      	cursor: pointer;
+      	margin: 5px;
+      }
+      .pls{
+      	text-shadow: 0px 0px 2px dodgerblue;
+       }
+      .button9248 .pls {
+      	cursor: pointer;
+      	display: inline-block;
+      	position: relative;
+      	transition: 0.5s;
+      }
+
+      .button9248 .pls:after {
+      	content: '\00AB';
+      	position: absolute;
+      	opacity: 0;
+      	top: 0;
+      	left: -20px;
+      	transition: 0.5s;
+      }
+
+      .button9248:hover .pls {
+      	padding-left: 25px;
+      }
+
+      .button9248:hover .pls:after {
+      	opacity: 1;
+      	left: 0;
+      }
+      .button1220 {
+      	display: inline-block;
+      	border-radius: 2px;
+      	background-color: darkblue;
+      	border: none;
+      	color: #FFFFFF;
+      	text-align: center;
+      	font-size: 16px;
+      	padding: 10px 20px;
+      	transition: all 0.5s;
+      	cursor: pointer;
+      	margin: 5px;
+      }
+      .plz{
+      	text-shadow: 0px 0px 2px dodgerblue;
+       }
+      .button1220 .plz {
+      	cursor: pointer;
+      	display: inline-block;
+      	position: relative;
+      	transition: 0.5s;
+      }
+
+      .button1220 .plz:after {
+      	content: '\04E8';
+      	position: absolute;
+      	opacity: 0;
+      	top: 0;
+      	right: -20px;
+      	transition: 0.5s;
+      }
+
+      .button1220:hover .plz {
+      	padding-right: 25px;
+      }
+
+      .button1220:hover .plz:after {
+      	opacity: 1;
+      	right: 0;
+      }
+      /* width */
+      ::-webkit-scrollbar {
+      	width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+      	background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+      	background: #167AC6;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+      	background: #024EAF;
+      }
+    </style>
 </head>
 <body>
-    <h1 style="font-size:3rem;color:green">Thankyou For Shopping With Us! </h1>
-    
-    <input type="button" value="LogOut" style="border: none;padding: 15px;background-color: teal;" onclick="location='logout.php'" />
-    
+    <h1>Thankyou For Shopping With Us! </h1>
+    <div class="aoji">
+      <form action="../index.php">
+          <button class="button9248" style="vertical-align:middle"><span class="pls">Back To Home </span></button>
+      </form>
+      <form action="logout.php">
+      <button type="button" class="button1220" value="LogOut" onclick="location='logout.php'"><span class="plz">Logout</span></button>
+    </form>
+  </div>
+
 </body>
 </html>
