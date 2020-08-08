@@ -101,6 +101,46 @@
       	opacity: 1;
       	right: 0;
       }
+      .button650 {
+        display: inline-block;
+        border-radius: 2px;
+        background-color: darkblue;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      .ple{
+        text-shadow: 0px 0px 2px dodgerblue;
+       }
+      .button650 .ple {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button650 .ple:after {
+        content: '\276D';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .button650:hover .ple {
+        padding-right: 25px;
+      }
+
+      .button650:hover .ple:after {
+        opacity: 1;
+        right: 0;
+      }
       /* width */
       ::-webkit-scrollbar {
       	width: 10px;
@@ -130,6 +170,9 @@
       </form>
       <form action="logout.php">
       <button type="button" class="button1220" value="LogOut" onclick="location='logout.php'"><span class="plz">Logout</span></button>
+    </form>
+    <form action="visit.html">
+        <button class="button650" style="vertical-align:middle"><span class="ple">Visit Us</span></button>
     </form>
   </div>
 
