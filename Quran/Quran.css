@@ -1,4 +1,18 @@
+body{
+  background-color: #d0d0d0;
+}
+.kmp{
+  box-shadow: 3px 0px 0px black;
+}
+*{
+  margin: 0;
+}
 
+.containerss{
+  padding: 30px 50px;
+  text-align: center;
+  font-size: 18px;
+}
 .uff{
   clear: both;
   background-image: linear-gradient(to right,rgba(230,230,250,1),rgba(176,224,230,0.25),rgba(173,216,230,0.2),rgba(135,206,250,0.2),rgba(135,206,235,0.2));
@@ -18,9 +32,8 @@
 .hehe{
   font-size: 180%;
   text-decoration: underline overline;
-
-  /* text-align: center; */
 }
+
 /* h3+img{
   display: block;
   margin-left: auto;
@@ -162,18 +175,4 @@ div.surahA{
 .hmm a{
   font-size: 38px;
   text-decoration: none;
-}
-body{
-  background-color: #d0d0d0;
-}
-.kmp{
-  box-shadow: 3px 0px 0px black;
-}
-*{
-  margin: 0;
-}
-.containerss{
-  padding: 30px 50px;
-  text-align: center;
-  font-size: 18px;
 }

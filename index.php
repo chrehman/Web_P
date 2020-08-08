@@ -1,13 +1,13 @@
-<?php  
+<?php
 session_start();
 if(isset($_SESSION['login'])){
     if($_SESSION["login"]===true){
         $_SESSION["login"]=true;
     } else {
         $_SESSION["login"]=false;
-    }   
-        
-    
+    }
+
+
 } else {
     $_SESSION["login"]=false;
 
@@ -43,27 +43,25 @@ if(isset($_SESSION['login'])){
             width: 100%;
             height: 420px;
           }
-          /* width */
+
           ::-webkit-scrollbar {
             width: 10px;
           }
 
-          /* Track */
+
           ::-webkit-scrollbar-track {
             background: #f1f1f1;
           }
 
-          /* Handle */
+
           ::-webkit-scrollbar-thumb {
             background: #167AC6;
           }
 
-          /* Handle on hover */
+
           ::-webkit-scrollbar-thumb:hover {
             background: #024EAF;
           }
-
-
 
           .dropdown{
             position: relative;
@@ -96,6 +94,46 @@ if(isset($_SESSION['login'])){
           .dropdown:hover .dropbtn {
             background-color: #3e8e41;
           }
+          .button9248 {
+          	display: inline-block;
+          	border-radius: 3px;
+          	background-color: royalblue;
+          	border: none;
+          	color: #FFFFFF;
+          	text-align: center;
+          	font-size: 16px;
+          	padding: 8px 20px;
+          	transition: all 0.5s;
+          	cursor: pointer;
+          	margin: 8px 0px;
+          }
+          .pls{
+          	text-shadow: 0px 0px 2px dodgerblue;
+           }
+          .button9248 .pls {
+          	cursor: pointer;
+          	display: inline-block;
+          	position: relative;
+          	transition: 0.5s;
+          }
+
+          .button9248 .pls:before {
+          	content: '\00BB';
+          	position: absolute;
+          	opacity: 0;
+          	top: 0;
+          	right: -20px;
+          	transition: 0.5s;
+          }
+
+          .button9248:hover .pls {
+          	padding-right: 25px;
+          }
+
+          .button9248:hover .pls:before {
+          	opacity: 1;
+          	right: 0;
+          }
         </style>
     </head>
     <body id="page-top">
@@ -118,7 +156,7 @@ if(isset($_SESSION['login'])){
                           <a class="" href="Videos/Video.html">Quran</a>
                           <a class="" href="hidayah/hidyah.html">Hidayah</a>
                           <a class="" href="nasheed/nasheed.html">Nasheed</a>
-                          
+
                           </div>
                           </div>
                         </li>
@@ -164,6 +202,9 @@ if(isset($_SESSION['login'])){
                         <div class="featured-text text-center text-lg-left">
                             <h4>Quran</h4>
                             <p class="text-black-50 mb-0">Quran is the Light of guidance for all mankind containing 144 Surahs and a total of 30 Juz.This section Deal with Quranic chapters and their urdu trasnlation</p>
+                            <form action="./Quran/Quran.html">
+                                <button class="button9248" style="vertical-align:middle"><span class="pls">GoTo Page </span></button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -174,6 +215,9 @@ if(isset($_SESSION['login'])){
                         <div class="featured-text text-center text-lg-left">
                             <h4>Hadith</h4>
                             <p class="text-black-50 mb-0">"But when he, the Spirit of truth, comes, he will guide you into all the truth. He will not speak on his own; he will speak only what he hears, and he will tell you what is yet to come" Bible-John[16:13]. <br> The saying of Prophet Muhammad(pbuh) are the Ahadiths. They are vital to understand Islam and to have detail about its teachings.</p>
+                            <form action="./hadith.html">
+                                <button class="button9248" style="vertical-align:middle"><span class="pls">GoTo Page </span></button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -184,7 +228,21 @@ if(isset($_SESSION['login'])){
                         <div class="featured-text text-center text-lg-left">
                             <h4>Videos</h4>
                             <p class="text-black-50 mb-0">In this day and age the mainstream prefers to watch videos rather than to read books so this a curcial section which provides Motivational Videos, Naats & Nasheeds, and Quran lectures</p>
-
+                            <form action="./videos/Video.html">
+                                <button class="button9248" style="vertical-align:middle"><span class="pls">GoTo Page </span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-7"><a href="./product/index1.php"><img class="img-fluid mb-3 mb-lg-0 abbey" src="Products.jpg" alt="" /></a></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Products</h4>
+                            <p class="text-black-50 mb-0">This section contains products that Muslims use in their daily life like Prayer Mat,Counters,Cap and, few more.</p>
+                            <form action="./product/index1.php">
+                                <button class="button9248" style="vertical-align:middle"><span class="pls">GoTo Page </span></button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -195,7 +253,7 @@ if(isset($_SESSION['login'])){
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <iframe src="./From/SignIn.php" frameborder="0" width="" height=""></iframe>
+                    <iframe src="./From/SignIn.php" frameborder="0" width="800px" height="600px" scrolling="no"></iframe>
                     </div>
                 </div>
             </div>
