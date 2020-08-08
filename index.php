@@ -253,7 +253,7 @@ if(isset($_SESSION['login'])){
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <iframe src="./From/SignIn.php" frameborder="0" width="800px" height="600px" scrolling="no"></iframe>
+                      
                     </div>
                 </div>
             </div>
