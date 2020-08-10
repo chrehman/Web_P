@@ -249,15 +249,17 @@ if(isset($_SESSION['login'])){
             </div>
         </section>
         <!-- Signup-->
-        <!-- <section class="signup-section" id="signup">
+        <section class="signup-section" id="signup">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
-                      
+                   "By time"[103,1]
+                    "Indeed, mankind is in loss"[103,2]
+                    "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience."[103,3]
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- Contact -->
         <section class="contact-section bg-black">
             <div class="container">
